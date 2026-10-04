@@ -3,12 +3,13 @@
 @import "./hierarchy_chart";
 
 :root {
-	--bareq-primary: #0f766e;
-	--bareq-primary-dark: #0f172a;
-	--bareq-accent: #f59e0b;
+	--bareq-primary: #0066ff;
+	--bareq-primary-dark: #10124f;
+	--bareq-deep: #030725;
+	--bareq-accent: #2f9dff;
 	--primary: var(--bareq-primary);
 	--btn-primary: var(--bareq-primary);
-	--sidebar-select-color: rgba(15, 118, 110, 0.12);
+	--sidebar-select-color: rgba(0, 102, 255, 0.12);
 }
 
 .app-logo {
@@ -24,16 +25,16 @@
 .btn-primary,
 .btn.btn-primary,
 button.btn-primary {
-	background: linear-gradient(135deg, var(--bareq-primary), #0d9488) !important;
+	background: linear-gradient(135deg, var(--bareq-primary), #2f9dff) !important;
 	border-color: var(--bareq-primary) !important;
-	box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+	box-shadow: 0 10px 24px rgba(0, 102, 255, 0.24);
 }
 
 .btn-primary:hover,
 .btn.btn-primary:hover,
 button.btn-primary:hover {
-	background: linear-gradient(135deg, #115e59, #0f766e) !important;
-	border-color: #115e59 !important;
+	background: linear-gradient(135deg, #10124f, #0066ff) !important;
+	border-color: #10124f !important;
 }
 
 a,
