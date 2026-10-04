@@ -10,6 +10,9 @@ fi
 
 export PATH="${NVM_DIR}/versions/node/v${NODE_VERSION_DEVELOP}/bin/:${PATH}"
 
+git config --global --add safe.directory /workspace
+git config --global --add safe.directory /workspace/.git
+
 bench init --skip-redis-config-generation frappe-bench
 
 cd frappe-bench
@@ -23,9 +26,10 @@ bench set-redis-socketio-host redis://redis:6379
 # Remove redis, watch from Procfile
 sed -i '/redis/d' ./Procfile
 sed -i '/watch/d' ./Procfile
+sed -i 's/^web: bench serve  --port 8000/web: bench serve --host 0.0.0.0 --port 8000/' ./Procfile
 
 bench get-app erpnext
-bench get-app hrms
+bench get-app /workspace
 
 bench new-site hrms.localhost \
 --force \

@@ -1,3 +1,44 @@
 @import "./feedback";
 @import "./circular_progress";
 @import "./hierarchy_chart";
+
+:root {
+	--bareq-primary: #0f766e;
+	--bareq-primary-dark: #0f172a;
+	--bareq-accent: #f59e0b;
+	--primary: var(--bareq-primary);
+	--btn-primary: var(--bareq-primary);
+	--sidebar-select-color: rgba(15, 118, 110, 0.12);
+}
+
+.app-logo {
+	max-height: 48px;
+	width: auto;
+}
+
+.navbar-brand img,
+.standard-sidebar .standard-sidebar-label img {
+	max-height: 36px;
+}
+
+.btn-primary,
+.btn.btn-primary,
+button.btn-primary {
+	background: linear-gradient(135deg, var(--bareq-primary), #0d9488) !important;
+	border-color: var(--bareq-primary) !important;
+	box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+button.btn-primary:hover {
+	background: linear-gradient(135deg, #115e59, #0f766e) !important;
+	border-color: #115e59 !important;
+}
+
+a,
+.link-content,
+.desk-sidebar .standard-sidebar-item.selected,
+.standard-sidebar-item.selected {
+	color: var(--bareq-primary);
+}
